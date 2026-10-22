@@ -1,0 +1,170 @@
+Document Object Model
+
+Purpose
+- Allows programs and scripts to dynamically access and 
+update the content, structure, and style of a document.
+- Can change all HTML elements
+- Can change all HTML attributes
+- Can change all CSS styles
+
+Finding HTML Elements
+- document.getElementById(id)
+- document.getElementsByTagName(name)
+- document.getElementsByClassName(class)
+
+Get Element By ID - easiest way to find an HTML element
+
+<p id=“txt1”> Text 1 </p>
+<p id=“txt2”> Text 2 </p>
+document.getElementById(“txt1”).innerHTML=“Hi!”;
+
+Get Element By Tag - returns an array of objects of a specific <tag>
+
+<p id=“intro”> Hello world! </p>
+<p> Hello universe! </p>
+<p class=“comment”> New comment </p>
+document.getElementsByTagName(“p”);
+
+Get Element By Class - returns an array of objects of a specific class name
+
+<p class=“txt”> Text 1 <p>
+<p> Hello universe! </p>
+<p class=“txt”> Text 2 </p>
+var x = document.getElementsByClassName(“txt”);
+
+Changing Content
+
+Changing Text By ID 
+1. HTML
+<p id=“p1”> Hello World </p>
+
+2. Javascript
+document.getElementById(“p1”).innerHTML = “New text!”;
+
+OR
+
+var x = document.getElementById(“p1”);
+x.innerHTML = “New Text”;
+
+Changing Text By Class
+1. HTML
+<p class=“post-title”> Title </p>
+<p class=“txt”> Text 1 </p>
+<p class=“txt”> Text 2 </p>
+
+2. Javascript
+var x = document.getElementsByClassName(“txt”);
+	for(var i = 0; i < x.length; i++)
+	x[i].innerHTML = “New Text”;
+
+Changing Text By Tag Name
+1. HTML
+<h1> Heading </h1>
+<p> Text 2 </p>
+<p> Text 3 </p>
+
+2. Javascript
+var x = document.getElementsByTagName(“p”);
+for(var i = 0; i < x.length; i++)
+x[i].innerHTML = “New Text”;
+
+Changing Image By ID
+1. HTML
+<img src=“logo.jpg” id=“icon”>
+
+2. Javascript
+document.getElementById(“icon”).src = “new.jpg”;	
+
+OR
+
+var x = document.getElementById(“icon”);
+x.src = “new.jpg”;
+
+Changing Images By Class Name
+1. HTMl
+<h1> My Title </h1>
+<img src=“act1.jpg” class=“act”>
+<img src=“act2.jpg” class=“act”>
+
+2. Javascript
+var x = document.getElementsByClassName(“act”);
+for(var i = 0; i < x.length; i++)
+x[i].src = “act_hover.jpg”;
+
+Changing Images by Tag Name
+1. HTML
+<h1> My Title </h1>
+<img src=“act1.jpg” class=“act”>
+<img src=“act2.jpg” class=“act”>
+
+2. Javascript
+var x = document.getElementsByTagName(“img”);
+for(var i = 0; i < x.length; i++)
+x[i].src = “act_hover.jpg”;
+
+Changing Styles
+
+Changing Color By ID
+1. HTML
+<h1 id=“title” style=“color: blue”> Title </h1>
+
+2. Javascript
+document.getElementById(“title”).style.color = “red”;
+
+OR 
+
+var x = document.getElementById(“title”);
+x.style.color = “red”;
+
+Changing Color By Class Name
+1. HTML
+<h1 id=“title” style=“color: blue”> Title </h1>
+<p class=“note” style=“color: blue”> Note </p>
+
+2. Javascript
+var x = document.getElementsByClassName(“note”);
+for(var i = 0; i < x.length; i++)
+	x[i].style.color = “red”;
+
+Changing Color by Tag Name
+1. HTML
+<h1 id=“title” style=“color: blue”> Title </h1>
+<p class=“note” style=“color: blue”> Note </p>
+
+2. Javascript
+var x = document.getElementsByTagName(“h1”);
+for(var i = 0; i < x.length; i++)
+	x[i].style.color = “red”;
+
+Adding Nodes
+1. HTML
+<div id=“div1”>
+	<p id=“p1”>This is a paragraph.</p>
+</div>
+
+2. Javascript
+
+New Paragraph
+var p2 = document.createElement(“p”);
+var node = document.createTextNode(“New <p>”);
+p2.appendChild(node);
+var element = document.getElementById(“div1”);
+element.appendChild(p2)
+
+New Image
+var p2 = document.createElement(“p”);
+var node = document.createTextNode(“New <p>”);
+p2.appendChild(node);
+var element = document.getElementById(“div1”);
+element.appendChild(p2)
+
+Removing Nodes
+1. HTML
+<div id=“div1”>
+	<p id=“p1”>This is a paragraph.</p>
+</div>
+
+2. Javascript
+var x = document.getElementById(“p1”);
+x.remove();
+

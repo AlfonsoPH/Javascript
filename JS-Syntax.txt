@@ -1,0 +1,206 @@
+Javascript Syntax
+
+Data Types
+1. Numbers
+2. Strings
+3. Boolean
+
+Variables
+- Untyped language; a variable can be of any data type.
+- Data type can change based on the data type of the value assigned to it.
+
+Ex: 
+<script type="text/javascript">
+	var id = 113;
+	var name;
+	name = "Ned";
+</script>
+
+Variable Types
+1. Global - defined anywhere in the JS code; accesible to all functions.
+2. Local - declared within a function and only visible within that function.
+
+Ex:
+<scipt type="text/javascript">
+	function sample() {
+		var myVar = "local";
+		document.write(myVar);
+	}
+</script>
+
+Conditional Statements
+
+1. If-else
+<script type=“text/javascript”>
+	var x = 1;
+	if(x == 1)
+		document.write(“x is equal to 1”);
+	else if(x==2)
+		document.write("x is equal to 2");
+	else 
+		document.write("x is not equal to 1");
+</script>
+
+2. Switch case
+<script type=“text/javascript”>
+	var x = 3;
+	switch(x) {
+	case 1: document.write(“x = 1”); break;
+	case 2: document.write(“x = 2”); break;
+	default: document.write(“x =/= 1 || 2”);
+}
+</script>
+
+Loops
+1. While loop
+<script type=“text/javascript”>
+	var i = 0;
+	var n = 3;
+	while(i < n) {
+		document.write(i + “<br>”);
+		i++;
+	}
+</script>
+
+2. Do-while Loop
+<script type=“text/javascript”>
+	var i = 0;
+	var n = 3;
+	do {
+		document.write(i + “<br>”);
+		i++;
+	} while(i < n);
+</script>
+
+3. For Loop
+<script type=“text/javascript”>
+	var i;
+	var n = 3;
+	for(i = 0; i < n; i++)
+		document.write(i + “<br>”);
+</script>
+
+Declaring Functions
+- Use function reserved word 
+- Data type and return value not declared
+
+<script type=“text/javascript”>
+	function functionName(parameters) {
+		statements
+	}
+</script>
+
+Ex:
+<script type=“text/javascript”>
+	function sayHello(name) {
+		alert(“Hello there, ” + name + “!”);
+	}
+</script>
+
+<body>
+	<form>
+		<input type = “button”
+		onclick = “sayHello(‘Ned’)” 
+		value = “Say Hello”>
+	</form>
+</body>
+
+Arrays
+var colors = new Array(3);
+var colors = new Array(“blue”, “red”, “yellow”);
+var colors = [“blue”, “red”, “yellow”];
+
+- Accesing "blue":
+	- colors[0];
+- Changing 2nd element:
+	- colors[2] = "green";
+- Add elements to end
+	- colors[3] = "green";
+	- colors.push("green", "white");
+- Add elements to start
+	- colors.unshift("green", "white");
+- Add element after 1st element
+	- colors.splice(1, 0, "green", "white");
+- Remove last element
+	- colors.pop();
+- Remove last element (assuming there's 3)
+	- colors.length = 2;
+- Remove the first element
+	- colors.shift();
+- Remove the second element
+	- colors.splice(1, 1);
+- Remove the second and third element
+	- colors.splice(1, 2);
+
+Objects
+- Composed of attributes
+- If an attribute contains a function, it is a method of the object. Else, the aatribute is a property.
+- To add a new field/property, simply assign a value to it. If the field doesn’t exist, JS will create it automatically.
+
+var p = {
+	firstName: "Ned",
+	lastName: "Stark",
+	age: 50
+};
+
+var p = newObject();
+p.firstName = “Ned”;
+p.lastName = “Stark”;
+p.age = 50;
+
+var x = p;
+x.firstName = "Bran";
+
+Accessing Properties
+p.firstName
+p["firstName"]
+
+Adding Properties
+p.eyeColor = "brown";
+
+Deleting Properties
+delete p.age;
+
+var p = {
+	hours: 40,
+	ratePerHour: 500
+}
+
+p.getSalary = function() {
+	return this.hours * this.ratePerHour;
+}
+
+OR
+
+var p = {
+	hours: 40,
+	ratePerHour: 500
+
+	getSalary: function() {
+		return this.hours * this.ratePerHour; 
+	}
+
+	get salary() {
+		return this.hours * this.ratePerHour; 
+	}
+
+	set rate(rate) {
+		this.ratePerHour = rate;
+	}
+}
+
+Get Salary
+p.getSalary(); 
+p.salary; 
+
+Set Rate
+p.rate = 600;
+
+Creating Objects
+function person(firstName, lastName, age) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.age = age;
+}
+
+var p1 = new person(“Ned”, “Stark”, 50);	

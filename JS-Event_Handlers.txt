@@ -1,0 +1,37 @@
+Javascript Event Handlers
+
+1. onload
+<body onload="document.write('Hello World!')> </body>
+
+2. onClick
+<body>
+	<button onclick="alert('Hello!')"> Click Me! </button>
+</body>
+
+2. onMouseOver
+<body>
+	<button onmouseover="alert('Hello!')"> Hover here! </button>
+</body>
+
+3. onMouseOut
+<body>
+	<button onmouseout="alert('Hello!')"> Hover here! </button>
+</body>
+
+4. onFocus, onBlur
+<body>
+	<input type="text" placeholder="Focus Here" 
+		onfocus="this.placeholder='Your name here'"
+		onblur="this.placeholder='Focus here'"/>
+		
+</body>
+
+5. onChange
+<body>
+	<select onchange="alert(this.options[this.selectedIndex].value);">
+		<option value="One"> Un </option>
+		<option value="Two"> Deux </option>
+		<option value="Three"> Trois </option>
+		<option value="Four"> Quatre </option>
+	</select>
+</body>

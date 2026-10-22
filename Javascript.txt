@@ -1,0 +1,25 @@
+Javascript 
+
+Javascript Uses
+1. Accepting inputs
+2. Processing data
+3. Modifying pages 
+4. Manipulating windows
+
+Attaching Javascript
+1. External - separate file
+2. Internal - in <head> and/or <body>
+3. Inline - placed inside HTML tags as attributes
+
+<head>
+- Will be processed first before the page loads
+
+<body>
+- Will execute when the page loads
+
+Connecting Separate Javascript file
+- Put in <head> or <body>
+<script type="text/javascript" src="external.js"> </script>
+
+- type: text/css or text/javascript
+- src: url of an external script file

@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="index.css" />
+    <File Path="index.html" />
+    <File Path="index.js" />
+    <File Path="Javascript.txt" />
+    <File Path="JQuery.txt" />
+    <File Path="JS-Dom.txt" />
+    <File Path="JS-Event_Handlers.txt" />
+    <File Path="JS-Syntax.txt" />
+  </Folder>
+</Solution>
