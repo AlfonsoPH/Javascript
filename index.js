@@ -7,7 +7,7 @@
         // creates alert box if comment box is empty
         if (commentText === "") {
             alert("Empty!");
-            return;
+            return;s
         }
 
         const newComment = $('<p class="comment"></p>').text(commentText); // creates new p tag per comment

@@ -1,5 +1,8 @@
 <Solution>
   <Folder Name="/Solution Items/">
+    <File Path="eventhandlers.css" />
+    <File Path="eventhandlers.html" />
+    <File Path="eventhandlers.js" />
     <File Path="index.css" />
     <File Path="index.html" />
     <File Path="index.js" />
